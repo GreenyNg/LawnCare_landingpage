@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my lawncare website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+        }
+
+        h2 {
+            margin: 25px auto;
+        }
+
+        h2 .care {
+            color: white;
+        }
+
+        .order {
+            display: inline;
+            margin: 25px 20px;
+            padding: 0;
+        }
+
+        .order li {
+            border: 1px solid transparent;
+            border-radius: 100%;
+            display: inline-flex;
+            padding: 7px;
+            background: white;
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+        }
+
+        .searchbox {
+            margin: 25px 20px;
+            display: inline-block;
+        }
+
+        .input {
+            width: 100px;
+            border: none;
+            border-radius: 6px;
+            padding: 4px 5px;
+        }
+
+        .search {
+            padding: 4px 5px;
+            border: none;
+            border-radius: 10px;
+            transition: all 200ms ease-in-out;
+            color: rgb(51, 139, 147);
+        }
+
+        .search:hover {
+            background: rgb(182, 244, 146);
+            color: white;
+            cursor: pointer;
+        }
+
+        .flag {
+          margin: 0 auto;  
+        }
+
+        .flag .line {
+            background: white;
+            margin: 0 auto;
+            border: 1px solid transparent;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: all 200ms ease-in-out;
+
+        }
+
+        a:hover {
+            color: rgb(51, 139, 147);
+        }
+
+        .about {
+            margin: 20px auto;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .lawn {
+            margin: 0 auto;
+            border: 1px solid rgb(182, 244, 146);
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/938/original/lawn.jpg?1684876553);
+            filter: blur(0.5px);
+            padding: 50px;
+            opacity: 0.9;
+        }
+
+        .care {
+            line-height: 1.0;
+            color: white;
+        }
+
+        .lawn .care .welcome {
+            padding: 5px 10px;
+            border-radius: 10px 0;
+            border: none;
+        }
+        
+        .lawn .care h1 {
+            margin: 20px 0 0 0;
+        }
+
+        .lawn .care .p {
+            padding: 0;
+        }
+
+        .lawn .care .btn {
+            padding: 5px 10px;
+            border: none;
+            color:rgb(51, 139, 147);
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+        }
+
+        .lawn .care .btn:hover {
+            background: rgb(182, 244, 146);
+            border: none;
+        }
+
+        .img {
+            width: 250px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        .part {
+            text-align: center;
+            max-width: 100%;
+            width: 100%;
+            margin: 50px auto;
+        }
+
+        .part p {
+            line-height: 1.5;
+            padding-bottom: 0;
+        }
+
+        .part h3 {
+            color: rgb(51, 139, 147);
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+            margin: 0%;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .prod {
+            display: inline-block;
+            background: white;
+            border: none;
+            border-radius: 4px;
+            margin: 30px 20px;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .prod h4 {
+            margin-bottom: 0;
+            color: rgb(51, 139, 147);
+        }
+
+        .prod p {
+            margin: 0;
+            font-size: smaller;
+        }
+
+        @media (max-width: 800px) {
+            .flex-item-right, .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+        .foot {
+            background: rgba(51, 139, 147, 0.9);
+            padding: 40px;
+        }
+
+        .footer {
+            margin: 30px auto;
+            color: white;
+        }
+        
+        .footer h1 {
+            color: rgb(182, 244, 146);
+        }
+
+        .footer input {
+            border: none;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .footer button {
+            background: rgb(182, 244, 146);
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 200ms ease-in-out;
+            box-shadow: rgb(51, 139, 147) 5px 5px 5px;
+        }
+
+        .footer button:hover {
+            background: rgba(182, 244, 146, 0.2);
+            color: rgb(51, 139, 147);
+            cursor: pointer;
+        }
+
+        .link {
+            text-decoration: none;
+        }
+
+        .pee {
+            text-align: center;
+            font-size: smaller;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div class="container">
+                <ul class="order">
+                    <li><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/746/original/pngwing.com.png?1685388845" alt=""></li>
+                    <li><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/745/original/pngwing.com_%281%29.png?1685388833" alt=""></li>
+                    <li><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/744/original/pngwing.com_%282%29.png?1685388820" alt=""></li>
+                </ul>
+
+                <h2>Lawn<span class="care">Care</span></h2>
+
+                <div class="searchbox">
+                <input class="input" id="search" type="text">
+                <button class="search" for="search">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="flag">
+            <div class="line">
+                <ul class="about">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="lawn">
+             <div class="care">
+                <button class="welcome">WELCOME TO LAWN CARE</button>
+
+                <h1>Lawn care for<br />everyone</h1>
+
+                <p class="p">Let us work on your yard</p>
+
+                <button class="btn">Learn more ></button>
+             </div>
+            </div>
+        </div><br><br>
+
+        <div class="part">
+        <p>Tips & Techniques</p>
+        <h3>Seasonal Lawn Care Tips</h3>
+        <div class="products">
+            <div class="prod">
+                <img class="img" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/758/original/fall.jpeg?1685391882" alt="">
+                <h4>Fall</h4>
+                <p>For far away, beyond the word mountains, far from the countries Vokalia and Constantia, there live the bind texts</p>
+            </div>
+            <div class="prod">
+                <img class="img" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/757/original/spring.jpeg?1685391870" alt="">
+                <h4>Spring</h4>
+                <p>For far away, beyond the word mountains, far from the countries Vokalia and Constantia, there live the bind texts</p>
+            </div>
+            <div class="prod">
+                <img class="img" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/756/original/summer.jpeg?1685391837" alt="">
+                <h4>Summer</h4>
+                <p>For far away, beyond the word mountains, far from the countries Vokalia and Constantia, there live the bind texts</p>
+            </div>
+        </div>
+        </div><br><br>
+
+        <div class="foot">
+            <footer class="footer">
+            <h2>contact with us</h2>
+            <p>Do you have any comments or questions about the products then contact us.</p>
+            <h1>+00(123) 456-78-09</h1><br>
+
+            <h3>Subcribe to our Newsletter</h3>
+            <input type="email" placeholder="email" required >
+            <button class="sub" type="submit"><a class="link" href="#"></a> Subscribe</button><br>
+            </footer>
+        </div>
+        <p class="pee">Copyright @TheGraphicalGreeny</p>
+    </div>
+
+    <script>
+        let mail = prompt("Like what you see?");
+        if(mail === "yes") {
+            alert("Then subscribe below!");
+        } else {
+            alert("Send a mail to support@lawncare!");
+            }
+
+function Subscribe() {
+    let like = prompt("Would you like to receive daily updates on our latest services?");
+
+    if(like === "yes") {
+        alert("Thank you! You've been added to our mailing list!");
+    } else {
+        alert("Subsription cancelled");
+    }
+}
+
+    let sub = document.querySelector(".sub");
+    sub.addEventListener("click", Subscribe);        
+    </script>
+</body>
+</html>
